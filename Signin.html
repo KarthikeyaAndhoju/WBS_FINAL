@@ -1,0 +1,51 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            Let us Signin
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', path='\inn.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section>
+            <div class="imgbx">
+                <img src="{{ url_for('static', path='\image.jpg') }}" alt="img loading">
+            </div>
+            <div class="contentbx">
+                    <div class="formbx">
+                        <h2>Signin</h2>
+                        <form>
+                            <div class="inputbx">
+                                <span>Username</span>
+                                <input type="text"  placeholder="Enter the username" name="">
+                            </div>
+                            <div class="inputbx">
+                                <span>Password</span>
+                                <input type="password" placeholder="password" name="">
+                            </div>
+                            <div class="remember">
+                                <label><input type="checkbox" name="">Remember me</label>
+                            </div>
+                            <div class="inputbx">
+                                <input type="submit" value="Signin" name="">
+                            </div>
+                            <div class="inputbx">
+                                <p>Don't have an account? <a href="Signup.html">Signup</a></p>
+                            </div>
+                        </form>
+                        <h4>Signin with</h4>
+                        <ul class="sci">
+                            <a class="li" href="#"><i class="fa fa-google"></i></a>
+                            <a class="li" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="li" href="#"><i class="fa fa-twitter"></i></a>
+                        </ul>
+                    </div>
+            </div>
+        </section>
+    </body>
+</html>

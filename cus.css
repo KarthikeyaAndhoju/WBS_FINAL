@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+:root{
+    --red:#E41B17;
+    --blue:#00BFFF;
+    --gradient: linear-gradient(90deg,var(--red), var(--blue));
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Oswald';
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform: capitalize;
+}
+*::selection{
+    background: var(--red);
+    color: #fff;
+}
+html,
+body {
+  font-size: 75.5%;
+  height: 100vh;
+  align-items: center;
+  background-size: cover;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    background: linear-gradient(135deg,#B6B6B4, #F0FFFF);
+    padding:1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color:var(#0000FF);
+    text-shadow: 0.5px 0.5px #E41B17;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+header .logo span{
+    color:var(--red);
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px #0000FF;
+}
+header .logo .l1:hover{
+    color:#0000FF;
+    text-shadow: 1.25px 1.25px #E41B17;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color:var(#0000FF);
+    text-shadow: 1px 1px #E41B17;
+}
+header .navbar a:hover{
+    color:#E41B17;
+    text-shadow: 1px 1px #0000FF;
+}
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("14.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    border-radius: 4.5px;
+}
+
+.left{
+	background: url("1.jpg") no-repeat center;
+	background-size: contain;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background: linear-gradient(135deg,#E41B17,#00BFFF);;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background: linear-gradient(135deg,#B6B6B4, #F0FFFF);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    border-radius: 10px;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background: linear-gradient(135deg,#E41B17,#00BFFF);;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background: linear-gradient(135deg,#00BFFF,#E41B17);;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media( max-width:1024px) {
+    html{
+        font-size: 55%;
+    }
+    
+}
+@media(max-width:1024px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5 1rem rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+  }

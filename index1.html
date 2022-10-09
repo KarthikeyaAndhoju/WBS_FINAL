@@ -1,0 +1,179 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="ind1.css">
+    </head>
+    <body>
+      <header>
+        <a href="C:\Users\Koushik\Desktop\Karthikeya22\1\index1.html" class="logo"><span class="l1">WITH &BY<br>&nbsp &nbsp STUD</span></a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="navbar">
+            <a href="index1.html">HOME</a>
+            <a href="C:\Users\Koushik\Desktop\Karthikeya22\2\explore.html">EXPLORE</a>
+            <a href="C:\Users\Koushik\Desktop\Karthikeya22\2\tp.html">TOP CHOICE</a>
+            <a href="C:\Users\Koushik\Desktop\Karthikeya22\2\cus.html">CONTACT US</a>
+            <a href="C:\Users\Koushik\Desktop\Karthikeya22\1\Signin.html">SIGNOUT</a>
+        </nav>
+      </header>
+          <div class="img-slider">
+            <div class="slide active">
+              <a href="https://www.nbcnews.com/mach/video/the-interspecies-internet-wants-to-give-the-animal-kingdom-the-power-of-communication-70567493677"><img src="ca.jpg" alt=""></a>
+              <div class="info">
+                <p>The Interspecies Internet wants to give the animal kingdom the power of communication</p>
+              </div>
+            </div>
+            <div class="slide">
+              <a href="https://www.cio.com/article/309036/harvesting-the-benefits-of-cloud-native-hyperconvergence.html"><img src="cn1.jpg" alt=""></a>
+              <div class="info">
+                <p>Harvesting the Benefits of Cloud-Native Hyperconvergence</p>
+              </div>
+            </div>
+            <div class="slide">
+              <a href="https://www.cio.com/article/401412/the-container-age-has-security-to-go-as-part-of-its-supply-chain.html"><img src="do.jpg" alt=""></a>
+              <div class="info">
+                <p>The Container Age Has Security-To-Go as Part of its Supply Chain</p>
+              </div>
+            </div>
+            <div class="slide">
+              <a href="https://techxplore.com/news/2022-07-daydreamer-algorithm-quickly-robots-behaviors.html"><img src="ro.jpg" alt=""></a>
+              <div class="info">
+                <p>An algorithm to quickly teach robots new behaviors in the real world</p>
+              </div>
+            </div>
+            <div class="navigation">
+              <div class="btn active"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+            </div>
+          </div>
+      
+          <script type="text/javascript">
+          var slides = document.querySelectorAll('.slide');
+          var btns = document.querySelectorAll('.btn');
+          let currentSlide = 1;
+      
+          // Javascript for image slider manual navigation
+          var manualNav = function(manual){
+            slides.forEach((slide) => {
+              slide.classList.remove('active');
+      
+              btns.forEach((btn) => {
+                btn.classList.remove('active');
+              });
+            });
+      
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+          }
+      
+          btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+              manualNav(i);
+              currentSlide = i;
+            });
+          });
+      
+          // Javascript for image slider autoplay navigation
+          var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+      
+            var repeater = () => {
+              setTimeout(function(){
+                [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove('active');
+                });
+      
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+      
+              if(slides.length == i){
+                i = 0;
+              }
+              if(i >= slides.length){
+                return;
+              }
+              repeater();
+            }, 10000);
+            }
+            repeater();
+          }
+          repeat();
+          </script>
+        <section class="features" id="features">
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="heading">
+          <h1 >Booming Today </h1>
+        </div>
+          <div class="box-container">
+      
+              <div class="box">
+                  <img class="imag" src="ai.jpg" alt="">
+                  <h3>Artificial Intelligence</h3>
+                  <p>Artificial intelligence (AI) is a wide-ranging tool that enables people to rethink how we integrate information, analyze data, and use the resulting insights to improve decision making—and already it is transforming every walk of life.</p>
+                  <a href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/" class="btn">read more</a>
+              </div>
+      
+              <div class="box">
+                  <img class="imag" src="data.jpg" alt="">
+                  <h3>Data Science</h3>
+                  <p>Data Science has been established as an important emergent scientific field and paradigm driving research evolution in such disciplines as statistics, computing science and intelligence science, and practical transformation in such domains</p>
+                  <a href="https://www.springer.com/journal/41060" class="btn">read more</a>
+              </div>
+      
+              <div class="box">
+                  <img class="imag" src="ml.png" alt="">
+                  <h3>Machine Learning</h3>
+                  <p>Human intelligence reflects our brain’s ability to learn. Computer systems that act like humans use artificial intelligence. That means these systems are under the control of computer programs that can learn. Just as people do,</p>
+                  <a href="https://www.snexplores.org/article/machine-learning-explainer-deep-learning-neural-nets-ai" class="btn">read more</a>
+              </div>
+      
+          </div>
+      
+      </section>
+      
+        <div class="fo">
+            <div class="footer_area">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                      <div class="footer_top flex-column">
+                        <div class="footer_logo">
+                          <a href="#">
+                            <img src="img/logo.png" alt="">
+                          </a>
+                          <h4>Follow Us</h4>
+                        </div>
+                        <div class="footer_social">
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row footer_bottom justify-content-center">
+                    <p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by EXITO</p>
+                </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
